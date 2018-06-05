@@ -1613,6 +1613,169 @@ img:hover {
   height: 1px;
   background: #00c4b6;
 }
+#sidebar .heart {
+  margin: 80px 90px 0;
+  width: 88px;
+  height: 88px;
+  background: #f00;
+  position: relative;
+  filter: drop-shadow(0px 0px 20px #ff1414);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-animation: heartbeat 2s ease infinite;
+  -moz-animation: heartbeat 2s ease infinite;
+  -o-animation: heartbeat 2s ease infinite;
+  -ms-animation: heartbeat 2s ease infinite;
+  animation: heartbeat 2s ease infinite;
+  -webkit-animation: heartbeat 2s ease infinite;
+}
+#sidebar .heart:before,
+#sidebar .heart:after {
+  content: "";
+  position: absolute;
+  width: 88px;
+  height: 88px;
+  background: #f00;
+  border-radius: 100px;
+}
+#sidebar .heart:before {
+  left: -50px;
+}
+#sidebar .heart:after {
+  left: 0;
+  top: -50px;
+}
+@-moz-keyframes heartbeat {
+  0% {
+    -webkit-transform: rotate(45deg) scale(0.8, 0.8);
+    -moz-transform: rotate(45deg) scale(0.8, 0.8);
+    -o-transform: rotate(45deg) scale(0.8, 0.8);
+    -ms-transform: rotate(45deg) scale(0.8, 0.8);
+    transform: rotate(45deg) scale(0.8, 0.8);
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+  25% {
+    -webkit-transform: rotate(45deg) scale(1, 1);
+    -moz-transform: rotate(45deg) scale(1, 1);
+    -o-transform: rotate(45deg) scale(1, 1);
+    -ms-transform: rotate(45deg) scale(1, 1);
+    transform: rotate(45deg) scale(1, 1);
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+  }
+  100% {
+    -webkit-transform: rotate(45deg) scale(0.8, 0.8);
+    -moz-transform: rotate(45deg) scale(0.8, 0.8);
+    -o-transform: rotate(45deg) scale(0.8, 0.8);
+    -ms-transform: rotate(45deg) scale(0.8, 0.8);
+    transform: rotate(45deg) scale(0.8, 0.8);
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+}
+@-webkit-keyframes heartbeat {
+  0% {
+    -webkit-transform: rotate(45deg) scale(0.8, 0.8);
+    -moz-transform: rotate(45deg) scale(0.8, 0.8);
+    -o-transform: rotate(45deg) scale(0.8, 0.8);
+    -ms-transform: rotate(45deg) scale(0.8, 0.8);
+    transform: rotate(45deg) scale(0.8, 0.8);
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+  25% {
+    -webkit-transform: rotate(45deg) scale(1, 1);
+    -moz-transform: rotate(45deg) scale(1, 1);
+    -o-transform: rotate(45deg) scale(1, 1);
+    -ms-transform: rotate(45deg) scale(1, 1);
+    transform: rotate(45deg) scale(1, 1);
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+  }
+  100% {
+    -webkit-transform: rotate(45deg) scale(0.8, 0.8);
+    -moz-transform: rotate(45deg) scale(0.8, 0.8);
+    -o-transform: rotate(45deg) scale(0.8, 0.8);
+    -ms-transform: rotate(45deg) scale(0.8, 0.8);
+    transform: rotate(45deg) scale(0.8, 0.8);
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+}
+@-o-keyframes heartbeat {
+  0% {
+    -webkit-transform: rotate(45deg) scale(0.8, 0.8);
+    -moz-transform: rotate(45deg) scale(0.8, 0.8);
+    -o-transform: rotate(45deg) scale(0.8, 0.8);
+    -ms-transform: rotate(45deg) scale(0.8, 0.8);
+    transform: rotate(45deg) scale(0.8, 0.8);
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+  25% {
+    -webkit-transform: rotate(45deg) scale(1, 1);
+    -moz-transform: rotate(45deg) scale(1, 1);
+    -o-transform: rotate(45deg) scale(1, 1);
+    -ms-transform: rotate(45deg) scale(1, 1);
+    transform: rotate(45deg) scale(1, 1);
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+  }
+  100% {
+    -webkit-transform: rotate(45deg) scale(0.8, 0.8);
+    -moz-transform: rotate(45deg) scale(0.8, 0.8);
+    -o-transform: rotate(45deg) scale(0.8, 0.8);
+    -ms-transform: rotate(45deg) scale(0.8, 0.8);
+    transform: rotate(45deg) scale(0.8, 0.8);
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+}
+@keyframes heartbeat {
+  0% {
+    -webkit-transform: rotate(45deg) scale(0.8, 0.8);
+    -moz-transform: rotate(45deg) scale(0.8, 0.8);
+    -o-transform: rotate(45deg) scale(0.8, 0.8);
+    -ms-transform: rotate(45deg) scale(0.8, 0.8);
+    transform: rotate(45deg) scale(0.8, 0.8);
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+  25% {
+    -webkit-transform: rotate(45deg) scale(1, 1);
+    -moz-transform: rotate(45deg) scale(1, 1);
+    -o-transform: rotate(45deg) scale(1, 1);
+    -ms-transform: rotate(45deg) scale(1, 1);
+    transform: rotate(45deg) scale(1, 1);
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+  }
+  100% {
+    -webkit-transform: rotate(45deg) scale(0.8, 0.8);
+    -moz-transform: rotate(45deg) scale(0.8, 0.8);
+    -o-transform: rotate(45deg) scale(0.8, 0.8);
+    -ms-transform: rotate(45deg) scale(0.8, 0.8);
+    transform: rotate(45deg) scale(0.8, 0.8);
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+}
 .search-dialog {
   position: absolute;
   top: 5rem;
