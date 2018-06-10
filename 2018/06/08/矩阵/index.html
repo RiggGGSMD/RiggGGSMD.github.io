@@ -1,0 +1,202 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="矩阵"><meta name="keywords" content="考研,数一,线性代数"><meta name="author" content="Rigg,undefined"><meta name="copyright" content="Rigg"><title>矩阵 | RiggのBlog</title><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css?version=1.5.4"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><link rel="dns-prefetch" href="https://hm.baidu.com"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?fbf45e34288801dd34b4ae9a0467d17c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  localSearch: {"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}"},"path":"search.xml"}
+} </script></head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本概念"><span class="toc-number">2.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#矩阵的运算及性质"><span class="toc-number">3.</span> <span class="toc-text">矩阵的运算及性质</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#加法"><span class="toc-number">3.1.</span> <span class="toc-text">加法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#乘法"><span class="toc-number">3.2.</span> <span class="toc-text">乘法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数乘矩阵"><span class="toc-number">3.2.1.</span> <span class="toc-text">数乘矩阵</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#矩阵间相乘"><span class="toc-number">3.2.2.</span> <span class="toc-text">矩阵间相乘</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#矩阵的转置"><span class="toc-number">3.3.</span> <span class="toc-text">矩阵的转置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方阵的行列式"><span class="toc-number">3.4.</span> <span class="toc-text">方阵的行列式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#共轭矩阵"><span class="toc-number">3.5.</span> <span class="toc-text">共轭矩阵</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#逆矩阵及伴随矩阵"><span class="toc-number">4.</span> <span class="toc-text">逆矩阵及伴随矩阵</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">5.</span> <span class="toc-text">总结</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="http://123.207.255.132:8080/resource/cat.png"></div><div class="author-info__name text-center">Rigg</div><div class="author-info__description text-center">keep eating!don't thinking!</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">3</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">5</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">4</span></a></div><hr><div class="heart"></div><br><span>    hhh...really thanks for you invite~ </span></div></div><div id="content-outer"><div id="top-container" style="background-image: url(http://123.207.255.132:8080/resource/Aeolian3.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">RiggのBlog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">首页</a><a class="site-page" href="/about">关于我</a><a class="site-page" href="/archives">文章</a><a class="site-page" href="/tags">标签</a><a class="site-page" href="/categories">分类</a><a class="site-page" href="/gallery">相册</a></span></div><div id="post-info"><div id="post-title">矩阵</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-06-08</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/学习/">学习</a><i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/学习/考研/">考研</a><span class="post-meta__separator">|</span><i class="fa fa-comment-o post-meta__icon" aria-hidden="true"></i><a href="/2018/06/08/矩阵/#disqus_thread"><span class="disqus-comment-count" data-disqus-identifier="2018/06/08/矩阵/"></span></a><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">1,142</span><span class="post-meta__separator">|</span><span>阅读时长: 4 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div id="post-content"><p><script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>矩阵是线代中非常重要的一部分，它基本上贯穿了线代考点的所有内容，掌握好矩阵的概念，利用矩阵的性质理论去解决问题。</p>
+<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>由 $m \times n$ 个数 $a<em>{ij}(i = 1,2, \cdots ,m;j = 1,2, \cdots ,n)$ 排列成的m行n列的数表称为矩阵，简称 $m \times n$ 矩阵(或 $A</em>{m \times n}$ )，记作</p>
+<script type="math/tex; mode=display">
+ A = \begin{bmatrix}
+ {a_{11}} & {a_{12}} & \cdots & {a_{1n}} \\\
+ {a_{21}} & {a_{22}} & \cdots & {a_{2n}} \\\
+ \vdots & \vdots & \ddots & \vdots \\\
+ {a_{m1}} & {a_{m2}} & \cdots & {a_{mn}} \\\
+\end{bmatrix} \tag(1)</script><h2 id="矩阵的运算及性质"><a href="#矩阵的运算及性质" class="headerlink" title="矩阵的运算及性质"></a>矩阵的运算及性质</h2><p>以下是关于矩阵的运算，主要包括了矩阵的加法，乘法，转置，行列式，共轭。</p>
+<h3 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h3><p>定义：设有两个 $m \times n$ 矩阵 $A = (a_ij)$ 和 $B = (b_ij)$,那么矩阵A和B的和记作 $A + B$,规定为</p>
+<script type="math/tex; mode=display">
+ A + B = \begin{bmatrix}
+ {a_{11}} + {b_{11}} & {a_{12}} + {b_{12}} & \cdots & {a_{1n}} + {b_{1n}} \\\
+ {a_{21}} + {b_{21}} & {a_{22}} + {b_{22}} & \cdots & {a_{2n}} + {b_{2n}} \\\
+ \vdots & \vdots & \ddots & \vdots \\\
+ {a_{m1}} + {b_{m1}} & {a_{m2}} + {b_{m1}} & \cdots & {a_{mn}} + {b_{mn}} \\\
+\end{bmatrix} \tag(2)</script><p>应当注意，只有两个矩阵为同型矩阵时才能进行加法运算，<strong>加法满足以下运算规律</strong></p>
+<ul>
+<li>A + B = B + A</li>
+<li>( A + B ) + C = A + ( B + C )<br><strong>减法的运算即加上负矩阵即</strong><blockquote>
+<p>A - B = A + ( -B )</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="乘法"><a href="#乘法" class="headerlink" title="乘法"></a>乘法</h3><h4 id="数乘矩阵"><a href="#数乘矩阵" class="headerlink" title="数乘矩阵"></a>数乘矩阵</h4><p>矩阵的乘法分为数乘矩阵与矩阵间相乘，数乘矩阵即</p>
+<script type="math/tex; mode=display">
+ \lambda A = \begin{bmatrix}
+ \lambda{a_{11}} & \lambda{a_{12}} & \cdots & \lambda{a_{1n}} \\\
+ \lambda{a_{21}} & \lambda{a_{22}} & \cdots & \lambda{a_{2n}} \\\
+ \vdots & \vdots & \ddots & \vdots \\\
+ \lambda{a_{m1}} & \lambda{a_{m2}} & \cdots & \lambda{a_{mn}} \\\
+\end{bmatrix} \tag(3)</script><p><strong>数乘矩阵满足以下运算规律</strong></p>
+<ul>
+<li>$( \lambda \mu ) A = \lambda ( \mu A )$</li>
+<li>$( \lambda + \mu ) A = \lambda A + \mu A$</li>
+<li>$\lambda ( A + B ) = \lambdaA + \lambda B$</li>
+</ul>
+<h4 id="矩阵间相乘"><a href="#矩阵间相乘" class="headerlink" title="矩阵间相乘"></a>矩阵间相乘</h4><p>定义：设 $A = ( a<em>{ij} )$ 是一个 $m \times s$ 矩阵，$B = ( b</em>{ij} )$ 是一个 $s \times n$ 矩阵，那么规定矩阵A与矩阵B觉得乘积是一个 $m \times n$ 矩阵 $C = ( c_{ij} )$，记作 C = AB，其中</p>
+<script type="math/tex; mode=display">
+c_{ij} = a_{i1}b_{1j} + a_{i2}b_{2j} + \cdots + a_{is}b_{sj} = \sum_{k = 1}^s a_{ik}b_{kj} \tag{4} \quad
+(i = 1,2, \cdots ,m;j = 1,2, \cdots ,n)</script><p><strong>矩阵相乘一定不能写反，例如AB不能写成BA，结果可能因为位置的调换而不同</strong>，接下来举一个简单的例子。<br>例. </p>
+<script type="math/tex; mode=display">
+A = \begin{pmatrix}
+-2 & 4 \\\
+1 & -2 \\\
+\end{pmatrix} 与
+\quad 
+B = \begin{pmatrix}
+2 & 4 \\\
+-3 & 6 \\\
+\end{pmatrix} \quad 求AB及BA</script><p>解:&nbsp;&nbsp;按照公式(4),有</p>
+<script type="math/tex; mode=display">
+AB =  \begin{pmatrix}
+-2 & 4 \\\
+1 & -2 \\\
+\end{pmatrix}\begin{pmatrix}
+2 & 4 \\\
+-3 & 6 \\\
+\end{pmatrix} = \begin{pmatrix}
+-16 & -32 \\\
+8 & 16 \\\
+\end{pmatrix} \\\
+\\\
+BA = \begin{pmatrix}
+2 & 4 \\\
+-3 & 6 \\\
+\end{pmatrix}\begin{pmatrix}
+-2 & 4 \\\
+1 & -2 \\\
+\end{pmatrix} = \begin{pmatrix}
+0 & 0 \\\
+0 & 0 \\\
+\end{pmatrix}</script><p>所以矩阵的乘法<strong>不满足</strong>交换律，但是仍满足以下的运算定律。</p>
+<ul>
+<li>( AB ) C = A ( BC )</li>
+<li>$\lambda ( AB ) = A ( \lambda B) = ( \lambda A ) B (其中\lambda 为数)$</li>
+<li>A ( B + C ) = AB +AC</li>
+</ul>
+<h3 id="矩阵的转置"><a href="#矩阵的转置" class="headerlink" title="矩阵的转置"></a>矩阵的转置</h3><p>定义：把矩阵A的行换成同序数的列得到一个新矩阵，叫做A的转置矩阵，记作 $A^T$，例如</p>
+<script type="math/tex; mode=display">
+A = \begin{bmatrix}
+ 1 & 2 & 0 \\\
+ 3 & -1 & 1 & \\\
+\end{bmatrix}</script><p>的转置矩阵为</p>
+<script type="math/tex; mode=display">
+A^T = \begin{bmatrix}
+ 1 & 3  \\\
+ 2 & -1 \\\
+ 0 & 1 \\\
+\end{bmatrix}</script><p><strong>矩阵的运算规律如下</strong></p>
+<ul>
+<li>$( A^T )^T = A$</li>
+<li>$( A + B )^T = A^T + B^T$</li>
+<li>$( \lambda A )^T = \lambda A^T$</li>
+<li>$( AB )^T = B^T A^T$</li>
+</ul>
+<h3 id="方阵的行列式"><a href="#方阵的行列式" class="headerlink" title="方阵的行列式"></a>方阵的行列式</h3><p>定义：由 n 阶方阵 A 的元素所构成的行列式(各元素的位置不变)，称为方阵 A 的行列式，<strong>应当注意的是方阵的行列式是一个数表，而行列式是一个确定的数</strong>。<br><strong>应当满足下述运算规律</strong></p>
+<ul>
+<li>$| A^T | = | A |$</li>
+<li>$| \lambda A| = \lambda^n | A |$</li>
+<li>$| AB | = | A || B |$</li>
+</ul>
+<h3 id="共轭矩阵"><a href="#共轭矩阵" class="headerlink" title="共轭矩阵"></a>共轭矩阵</h3><p>定义：当 $A = ( a<em>{ij} )$ 为复矩阵时，用$\overline{ a</em>{ij} }$ 表示 $a_{ij}$ 的共轭复数，记作</p>
+<script type="math/tex; mode=display">\overline{ A } = \overline{ a_{ij} }</script><p>其中 $\overline{ A }$ 称为 A 的共轭矩阵。其具有以下运算规律(A,B为复矩阵，$\lambda$为复数，并且运算都可运行)</p>
+<ul>
+<li>$\overline{ A + B } = \overline{ A } + \overline{ B }$</li>
+<li>$\overline{ \lambda A } = \overline{ \lambda } \overline{ A }$</li>
+<li>$\overline{ AB } = \overline{ A } \overline{ B }$</li>
+</ul>
+<h2 id="逆矩阵及伴随矩阵"><a href="#逆矩阵及伴随矩阵" class="headerlink" title="逆矩阵及伴随矩阵"></a>逆矩阵及伴随矩阵</h2><p>这一块在矩阵的知识中十分重要，我个人觉得需要记住的是逆矩阵的相关定理以及一些运算公式，还有伴随矩阵的定义等(若有其他之后会补充)，以方便计算与证明，下面就简单的罗列一下主要的定理以及常用的公式。</p>
+<ul>
+<li>定理1 若矩阵 A 可逆，则$| A | \neq 0$</li>
+<li>定理2 若$| A | \neq 0$，则矩阵A可逆</li>
+<li>推论 若 AB = E，则$B = A^{-1}$</li>
+<li>$( A^{-1} )^{-1} = A$</li>
+<li>$( \lambda A )^{-1} =  \frac{ 1 }{ \lambda } A^{-1}$</li>
+<li>$( AB )^{-1} = B^{-1} A^{-1}$</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>矩阵这部分的基础知识大概就是这样，进行了简单的概念定义定理的梳理，对需要用到的定理性质做了整理，剩下的就是对题型的总结，需要经过大量的练习掌握各个题型的解题方法，需要精通其中的解题套路，下面再将矩阵所涉及到的性质定理进行汇总，如下(★为常用)。</p>
+<ul>
+<li>矩阵<ul>
+<li>A + B = B + A</li>
+<li>( A + B ) + C = A + ( B + C )</li>
+<li>$( \lambda \mu ) A = \lambda ( \mu A )$</li>
+<li>$( \lambda + \mu ) A = \lambda A + \mu A$</li>
+<li>$\lambda ( A + B ) = \lambdaA + \lambda B$</li>
+<li>( AB ) C = A ( BC )</li>
+<li>$\lambda ( AB ) = A ( \lambda B) = ( \lambda A ) B (其中\lambda 为数)$</li>
+<li>A ( B + C ) = AB +AC</li>
+</ul>
+</li>
+<li>转置<ul>
+<li>$( A^T )^T = A$</li>
+<li>$( A^T )^m = ( A^m )^T$</li>
+<li>$( A \pm B )^T = A^T \pm B^T$</li>
+<li>$( \lambda A )^T = \lambda A^T$</li>
+<li>$( AB )^T = B^T A^T$ ★</li>
+</ul>
+</li>
+<li>行列式<ul>
+<li>$| kA | = k^n | A |$ ★</li>
+</ul>
+</li>
+<li>逆矩阵<ul>
+<li>$A^{-1} = \frac{ 1 }{ | A | } A^*$ ★</li>
+<li>$| A^{-1} | = \frac{ 1 }{ | A | }$ ★</li>
+<li>$( A^{-1} )^{-1} = A$</li>
+<li>$( \lambda A )^{-1} =  \frac{ 1 }{ \lambda } A^{-1}$ ★</li>
+<li>$( AB )^{-1} = B^{-1} A^{-1}$ ★</li>
+<li>$( A^T )^{-1} = ( A^{-1} )^T$</li>
+<li>$( A^n )^{-1} = ( A^{-1} )^n$</li>
+</ul>
+</li>
+<li>伴随矩阵<ul>
+<li>$A^* = |A| A^{-1}$ ★</li>
+<li>$| A^* | = | A |^{n - 1}$   ★</li>
+<li>$( A^T )^<em> = ( A^</em> )^T$</li>
+<li>$( kA )^<em> = k^{n - 1} A^</em>$ ★</li>
+<li>$( AB )^<em> = B^</em> A^*$ ★</li>
+</ul>
+</li>
+</ul>
+<p>大致就是这些了吧~</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Rigg</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://riggggsmd.xyz/2018/06/08/矩阵/">http://riggggsmd.xyz/2018/06/08/矩阵/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://riggggsmd.xyz" target="_blank">RiggのBlog</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/考研/">考研</a><a class="post-meta__tags" href="/tags/数一/">数一</a><a class="post-meta__tags" href="/tags/线性代数/">线性代数</a></div><div class="addthis_inline_share_toolbox pull-right"></div><script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b12b69f67a0e81e" async></script><nav id="pagination"><div class="next-post pull-right"><a href="/2018/06/07/行列式/"><span>行列式</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="disqus_thread"></div><script>var unused = null;
+var disqus_config = function () {
+  this.page.url = 'http://riggggsmd.xyz/2018/06/08/矩阵/';
+  this.page.identifier = '2018/06/08/矩阵/';
+  this.page.title = '矩阵';
+}
+var d = document, s = d.createElement('script');
+s.src = "https://" + 'Rigg' +".disqus.com/embed.js";
+s.setAttribute('data-timestamp', '' + +new Date());
+(d.head || d.body).appendChild(s);</script><script id="dsq-count-src" src="https://Rigg.disqus.com/count.js" async></script></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2018 By Rigg</div><div class="framework-info"><span> use </span><a href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a><span> to build this </span><a href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Hexo blog</span></a></div><div class="busuanzi"><script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="/js/third-party/anime.min.js"></script><script src="/js/third-party/jquery.min.js"></script><script src="/js/third-party/jquery.fancybox.min.js"></script><script src="/js/third-party/velocity.min.js"></script><script src="/js/third-party/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.5.4"></script><script src="/js/fancybox.js?version=1.5.4"></script><script src="/js/sidebar.js?version=1.5.4"></script><script src="/js/copy.js?version=1.5.4"></script><script src="/js/fireworks.js?version=1.5.4"></script><script src="/js/transition.js?version=1.5.4"></script><script src="/js/scroll.js?version=1.5.4"></script><script src="/js/head.js?version=1.5.4"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script></body></html>
