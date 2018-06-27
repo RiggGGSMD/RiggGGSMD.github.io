@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="线性方程组"><meta name="keywords" content="考研,数一,线性代数"><meta name="author" content="Rigg,undefined"><meta name="copyright" content="Rigg"><title>线性方程组 | RiggのBlog</title><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css?version=1.5.4"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><link rel="dns-prefetch" href="https://hm.baidu.com"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?fbf45e34288801dd34b4ae9a0467d17c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  localSearch: {"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}"},"path":"search.xml"}
+} </script></head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解的基本定理"><span class="toc-number">2.</span> <span class="toc-text">解的基本定理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解的结构"><span class="toc-number">3.</span> <span class="toc-text">解的结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#主要的题型"><span class="toc-number">4.</span> <span class="toc-text">主要的题型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">5.</span> <span class="toc-text">总结</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://riggggsmdpic.oss-cn-shenzhen.aliyuncs.com/234.jpg"></div><div class="author-info__name text-center">Rigg</div><div class="author-info__description text-center">keep eating!don't thinking!</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">5</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">5</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">4</span></a></div><hr><div class="heart"></div><br><span>    hhh...really thanks for you invite~ </span></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://riggggsmdpic.oss-cn-shenzhen.aliyuncs.com/17.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">RiggのBlog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">首页</a><a class="site-page" href="/about">关于我</a><a class="site-page" href="/archives">文章</a><a class="site-page" href="/tags">标签</a><a class="site-page" href="/categories">分类</a><a class="site-page" href="/gallery">相册</a></span></div><div id="post-info"><div id="post-title">线性方程组</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-06-27</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/学习/">学习</a><i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/学习/考研/">考研</a><span class="post-meta__separator">|</span><i class="fa fa-comment-o post-meta__icon" aria-hidden="true"></i><a href="/2018/06/27/线性方程组/#disqus_thread"><span class="disqus-comment-count" data-disqus-identifier="2018/06/27/线性方程组/"></span></a><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">554</span><span class="post-meta__separator">|</span><span>阅读时长: 2 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div id="post-content"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前段时间搬家加上学校的相关事宜导致没有时间进行总结，现在利用上午的时间对这部分进行以下小结。这部分主要的内容是线性方程组的求解问题，矩阵的知识在这章也十分重要，除了一些性质的使用，更多的是矩阵秩的应用，我的理解主要分为三个部分，解的定理，解的结构，还有一些其他的扩展之类的，主要还是理解加上练习，计算的内容比较多，也有部分证明题。</p>
+<h2 id="解的基本定理"><a href="#解的基本定理" class="headerlink" title="解的基本定理"></a>解的基本定理</h2><script type="math/tex; mode=display">
+齐次 \begin{cases} 
+m \times n \begin{cases}
+只有0解, & \text{ r( A ) = n } \\\
+非0解(无数解), & \text{ r( A ) < n } \\\ \end{cases} 
+n \times n \begin{cases}
+只有0解, & \text{ |A| \neq 0 } \\\
+非0解(无数解), & \text{ |A| = 0 } \\\ \end{cases}
+\end{cases} \\\
+
+非齐次 \begin{cases} 
+m \times n \begin{cases}
+r(A) = r( \overline{A} ) \begin{cases}
+r(A) = r( \overline{A} ) = n & \text{ 唯一解 } \\\
+r(A) = r( \overline{A} ) < n & \text{ 无数解 } \\\ \end{cases}
+r(A) \neq r( \overline{A} ), & \text{ 无解 } \\\ \end{cases} 
+n \times n \begin{cases}
+r(A) = r( \overline{A} ) \begin{cases}
+|A| \neq 0, & \text{ 唯一解 } \\\
+|A| = 0, & \text{ 无数解 } \\\ \end{cases}
+r(A) \neq r( \overline{A} ), & \text{ 无解 } \\\ \end{cases}
+\end{cases}</script><hr>
+<h2 id="解的结构"><a href="#解的结构" class="headerlink" title="解的结构"></a>解的结构</h2><ul>
+<li>设 $X_1, X_2, \cdots, X_s$ 为齐次线性方程组 Ax = 0 的一组解，则 $k_1X_1 + k_2X_2 + \cdots + k_sX_s$ 也为Ax = 0 的解，其中的k为任意常数。</li>
+<li>设 $\eta_0$ 为非齐次线性方程组 Ax = b 的一个解，$X_1, X_2, \cdots , X_s$ 为齐次线性方程组 AX = 0 的一组解，则 $k_1X_1 + k_2X_2 + \cdots + k_sX_s + \eta_0$ 为 Ax = b 的解。</li>
+<li>设 $\eta_1$，$\eta_2$ 为 非齐次线性方程组 Ax = b 的两个解，则 $\eta_2 - \eta_1$ 为齐次线性方程组 Ax = 0 的一个解。</li>
+<li>设 $X_1, X_2, \cdots , X_s$ 为非齐次线性方程组 Ax = b 的一组解，则 $k_1X_1 + k_2X_2 + \cdots + k_sX_s$ 为 Ax = b 的解的充分必要条件为 $k_1 + k_2 + \cdots + k_s = 1$。</li>
+<li>设 $\eta_1, \eta_2, \cdots ,\eta_s$ 为非齐次线性方程组 Ax = b 的一组解，则 $k_1 \eta_1 + k_2 \eta_2 + \cdots + k_s \eta_s$ 为齐次线性方程组 Ax = 0 的解的充分必要条件是 $k_1 + k_2 + \cdots + k_s = 0$。</li>
+</ul>
+<hr>
+<h2 id="主要的题型"><a href="#主要的题型" class="headerlink" title="主要的题型"></a>主要的题型</h2><p>在使用这些性质定理去求解时主要会遇到的题型如下</p>
+<ul>
+<li>求方程组的基础解系以及通解</li>
+<li>通过解的基本定理的应用去判断方程组解的情况以及求得基础解系或通解</li>
+<li>同解方程组问题</li>
+<li>证明题<br>细化的知识点有很多，但主要的题型大概就是这些了。</li>
+</ul>
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在遇到这部分题时要先判断方程组的类型然后再根据相应的定理性质进行解题，求解一般不难，难在理解以及对定理性质的熟练应用上，需要多加练习熟练掌握。</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Rigg</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://riggggsmd.xyz/2018/06/27/线性方程组/">https://riggggsmd.xyz/2018/06/27/线性方程组/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://riggggsmd.xyz" target="_blank">RiggのBlog</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/考研/">考研</a><a class="post-meta__tags" href="/tags/数一/">数一</a><a class="post-meta__tags" href="/tags/线性代数/">线性代数</a></div><div class="addthis_inline_share_toolbox pull-right"></div><script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b12b69f67a0e81e" async></script><nav id="pagination"><div class="next-post pull-right"><a href="/2018/06/19/向量/"><span>向量</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="disqus_thread"></div><script>var unused = null;
+var disqus_config = function () {
+  this.page.url = 'https://riggggsmd.xyz/2018/06/27/线性方程组/';
+  this.page.identifier = '2018/06/27/线性方程组/';
+  this.page.title = '线性方程组';
+}
+var d = document, s = d.createElement('script');
+s.src = "https://" + 'Rigg' +".disqus.com/embed.js";
+s.setAttribute('data-timestamp', '' + +new Date());
+(d.head || d.body).appendChild(s);</script><script id="dsq-count-src" src="https://Rigg.disqus.com/count.js" async></script></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2018 By Rigg</div><div class="framework-info"><span> use </span><a href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a><span> to build this </span><a href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Hexo blog</span></a></div><div class="busuanzi"><script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="/js/third-party/anime.min.js"></script><script src="/js/third-party/jquery.min.js"></script><script src="/js/third-party/jquery.fancybox.min.js"></script><script src="/js/third-party/velocity.min.js"></script><script src="/js/third-party/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.5.4"></script><script src="/js/fancybox.js?version=1.5.4"></script><script src="/js/sidebar.js?version=1.5.4"></script><script src="/js/copy.js?version=1.5.4"></script><script src="/js/fireworks.js?version=1.5.4"></script><script src="/js/transition.js?version=1.5.4"></script><script src="/js/scroll.js?version=1.5.4"></script><script src="/js/head.js?version=1.5.4"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script></body></html>
