@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="二次型"><meta name="keywords" content="考研,数一,线性代数"><meta name="author" content="Rigg,undefined"><meta name="copyright" content="Rigg"><title>二次型 | RiggのBlog</title><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css?version=1.5.4"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><link rel="dns-prefetch" href="https://hm.baidu.com"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?fbf45e34288801dd34b4ae9a0467d17c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  localSearch: {"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}"},"path":"search.xml"}
+} </script></head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二次型标准化"><span class="toc-number">2.</span> <span class="toc-text">二次型标准化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#了解一些常见的概念性质"><span class="toc-number">2.1.</span> <span class="toc-text">了解一些常见的概念性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二次型标准化的方法"><span class="toc-number">2.2.</span> <span class="toc-text">二次型标准化的方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正定二次型的判别与证明"><span class="toc-number">3.</span> <span class="toc-text">正定二次型的判别与证明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://riggggsmdpic.oss-cn-shenzhen.aliyuncs.com/234.jpg"></div><div class="author-info__name text-center">Rigg</div><div class="author-info__description text-center">keep eating!don't thinking!</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">7</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">5</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">4</span></a></div><hr><div class="heart"></div><br><span>    hhh...really thanks for you invite~ </span></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://riggggsmdpic.oss-cn-shenzhen.aliyuncs.com/Sylvanas.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">RiggのBlog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">首页</a><a class="site-page" href="/about">关于我</a><a class="site-page" href="/archives">文章</a><a class="site-page" href="/tags">标签</a><a class="site-page" href="/categories">分类</a><a class="site-page" href="/gallery">相册</a></span></div><div id="post-info"><div id="post-title">二次型</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-07-02</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/学习/">学习</a><i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/学习/考研/">考研</a><span class="post-meta__separator">|</span><i class="fa fa-comment-o post-meta__icon" aria-hidden="true"></i><a href="/2018/07/02/二次型/#disqus_thread"><span class="disqus-comment-count" data-disqus-identifier="2018/07/02/二次型/"></span></a><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">294</span><span class="post-meta__separator">|</span><span>阅读时长: 1 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div id="post-content"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本章内容较少，掌握主要的计算方法即可，主要的内容分为二次型标准化与正定性的相关问题。</p>
+<hr>
+<h2 id="二次型标准化"><a href="#二次型标准化" class="headerlink" title="二次型标准化"></a>二次型标准化</h2><h3 id="了解一些常见的概念性质"><a href="#了解一些常见的概念性质" class="headerlink" title="了解一些常见的概念性质"></a>了解一些常见的概念性质</h3><ol>
+<li>标准二次型：只含有平方项不含交叉项的二次型。</li>
+<li>规范二次型：系数为1或者-1的标准型。</li>
+<li>惯性指数：标准型中系数不为0的个数以及正系数与负系数的个数是唯一的，分别为二次型的秩、正惯性指数与负惯性指数。</li>
+<li>矩阵合同：设 A ， B 为 n 阶实对称矩阵，若存在可逆矩阵P，使得 $P^TAP = B$，称矩阵 A 与 B 合同。</li>
+</ol>
+<h3 id="二次型标准化的方法"><a href="#二次型标准化的方法" class="headerlink" title="二次型标准化的方法"></a>二次型标准化的方法</h3><ol>
+<li>配方法。</li>
+<li>正交变换法。</li>
+</ol>
+<hr>
+<h2 id="正定二次型的判别与证明"><a href="#正定二次型的判别与证明" class="headerlink" title="正定二次型的判别与证明"></a>正定二次型的判别与证明</h2><ol>
+<li>顺序主子式法(若都大于零，则为正定矩阵)。</li>
+<li>求特征值(若全为正，即为正定矩阵)。</li>
+<li>定义法。</li>
+<li>若存在可逆矩阵 P ，使得 $A = P^TP$ ，则 A 是正定矩阵。 </li>
+</ol>
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>主要的思路和题型方法记录于上，供查阅参考。</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Rigg</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://riggggsmd.xyz/2018/07/02/二次型/">https://riggggsmd.xyz/2018/07/02/二次型/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://riggggsmd.xyz" target="_blank">RiggのBlog</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/考研/">考研</a><a class="post-meta__tags" href="/tags/数一/">数一</a><a class="post-meta__tags" href="/tags/线性代数/">线性代数</a></div><div class="addthis_inline_share_toolbox pull-right"></div><script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b12b69f67a0e81e" async></script><nav id="pagination"><div class="next-post pull-right"><a href="/2018/06/30/特征值与特征向量/"><span>特征值与特征向量</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="disqus_thread"></div><script>var unused = null;
+var disqus_config = function () {
+  this.page.url = 'https://riggggsmd.xyz/2018/07/02/二次型/';
+  this.page.identifier = '2018/07/02/二次型/';
+  this.page.title = '二次型';
+}
+var d = document, s = d.createElement('script');
+s.src = "https://" + 'Rigg' +".disqus.com/embed.js";
+s.setAttribute('data-timestamp', '' + +new Date());
+(d.head || d.body).appendChild(s);</script><script id="dsq-count-src" src="https://Rigg.disqus.com/count.js" async></script></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2018 By Rigg</div><div class="framework-info"><span> use </span><a href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a><span> to build this </span><a href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Hexo blog</span></a></div><div class="busuanzi"><script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="/js/third-party/anime.min.js"></script><script src="/js/third-party/jquery.min.js"></script><script src="/js/third-party/jquery.fancybox.min.js"></script><script src="/js/third-party/velocity.min.js"></script><script src="/js/third-party/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.5.4"></script><script src="/js/fancybox.js?version=1.5.4"></script><script src="/js/sidebar.js?version=1.5.4"></script><script src="/js/copy.js?version=1.5.4"></script><script src="/js/fireworks.js?version=1.5.4"></script><script src="/js/transition.js?version=1.5.4"></script><script src="/js/scroll.js?version=1.5.4"></script><script src="/js/head.js?version=1.5.4"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script></body></html>

@@ -3,6 +3,33 @@
   
     
     <entry>
+      <title>二次型</title>
+      <link href="/2018/07/02/%E4%BA%8C%E6%AC%A1%E5%9E%8B/"/>
+      <url>/2018/07/02/%E4%BA%8C%E6%AC%A1%E5%9E%8B/</url>
+      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本章内容较少，掌握主要的计算方法即可，主要的内容分为二次型标准化与正定性的相关问题。</p><hr><h2 id="二次型标准化"><a href="#二次型标准化" class="headerlink" title="二次型标准化"></a>二次型标准化</h2><h3 id="了解一些常见的概念性质"><a href="#了解一些常见的概念性质" class="headerlink" title="了解一些常见的概念性质"></a>了解一些常见的概念性质</h3><ol><li>标准二次型：只含有平方项不含交叉项的二次型。</li><li>规范二次型：系数为1或者-1的标准型。</li><li>惯性指数：标准型中系数不为0的个数以及正系数与负系数的个数是唯一的，分别为二次型的秩、正惯性指数与负惯性指数。</li><li>矩阵合同：设 A ， B 为 n 阶实对称矩阵，若存在可逆矩阵P，使得 $P^TAP = B$，称矩阵 A 与 B 合同。</li></ol><h3 id="二次型标准化的方法"><a href="#二次型标准化的方法" class="headerlink" title="二次型标准化的方法"></a>二次型标准化的方法</h3><ol><li>配方法。</li><li>正交变换法。</li></ol><hr><h2 id="正定二次型的判别与证明"><a href="#正定二次型的判别与证明" class="headerlink" title="正定二次型的判别与证明"></a>正定二次型的判别与证明</h2><ol><li>顺序主子式法(若都大于零，则为正定矩阵)。</li><li>求特征值(若全为正，即为正定矩阵)。</li><li>定义法。</li><li>若存在可逆矩阵 P ，使得 $A = P^TP$ ，则 A 是正定矩阵。 </li></ol><hr><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>主要的思路和题型方法记录于上，供查阅参考。</p>]]></content>
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+          <category> 考研 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 考研 </tag>
+            
+            <tag> 数一 </tag>
+            
+            <tag> 线性代数 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>特征值与特征向量</title>
       <link href="/2018/06/30/%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/"/>
       <url>/2018/06/30/%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/</url>
